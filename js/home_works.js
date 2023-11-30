@@ -67,12 +67,10 @@ window.onload = function () {
 
     const divMlSeconds = document.getElementById("ml-secondsS");
     const divSeconds= document.getElementById("secondsS");
-    const divMinutes = document.getElementById("minutesS");
 
 
     var mlSeconds = 0;
     var seconds= 0;
-    var minutes = 0;
 
 
     let timer = null;
@@ -88,14 +86,9 @@ window.onload = function () {
         if (mlSeconds === 100) {
             mlSeconds = 0;
             seconds++;
-            if (seconds === 60) {
-                seconds = 0;
-                minutes++;
-            }
         }
         divMlSeconds.textContent = mlSeconds < 10 ? `0${mlSeconds}` : mlSeconds;
         divSeconds.textContent = seconds < 10 ? `0${seconds}` : seconds;
-        divMinutes.textContent = minutes < 10 ? `0${minutes}` : minutes;
     }
 
     function stopTimer() {
@@ -107,10 +100,8 @@ window.onload = function () {
         clearInterval(timer);
         mlSeconds = 0;
         seconds = 0;
-        minutes = 0;
         divMlSeconds.textContent = "00";
         divSeconds.textContent = "00";
-        divMinutes.textContent = "00";
         timer = null;
     }
 
