@@ -29,6 +29,14 @@
                     </li>
                 </ul>
                 <button class="btn" id="btn-get">Click me!</button>
+                <script>
+                    function redirectToGame() {
+                        window.location.href = 'D:\\program\\pages\\game.html';
+                    }
+
+                    const buttonClickMe = document.getElementById("btn-get");
+                    buttonClickMe.addEventListener('click', redirectToGame);
+                </script>
             </div>
         </div>
     </div>
