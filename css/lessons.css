@@ -170,3 +170,15 @@
 hr {
     width: 100%;
 }
+
+#btn-convert {
+    margin-left: 475px;
+    margin-top: 50px;
+}
+
+#convertError {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
